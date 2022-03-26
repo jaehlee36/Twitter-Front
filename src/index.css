@@ -1,0 +1,364 @@
+:root {
+  --color-white: #f9fafa;
+  --color-black: #141518;
+  --color-blue: #1a9ff0;
+  --color-darkBlue: #073d5d;
+  --color-grey: #dee0e0;
+  --color-darkGrey: #969696;
+  --color-red: #cc473d;
+  --color-green: #7aa300;
+  --color-yellow: #fff6b0;
+  --color-shadow: rgba(0, 0, 0, 0.2);
+  --size-avatar: 38px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-grey);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  color: var(--color-white);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.app {
+  width: 100vw;
+  max-width: 500px;
+  height: 100vh;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 30px 0 rgb(0 0 0 / 20%), 0 5px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 10px 15px;
+  box-shadow: 0 4px 4px var(--color-shadow);
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-user {
+  font-size: 0.7rem;
+  color: var(--color-blue);
+  padding-top: 8px;
+}
+
+.menu {
+  color: var(--color-black);
+}
+
+.menu-account {
+  font-weight: bold;
+  padding: 0px;
+}
+.menu-item {
+  color: var(--color-white);
+  font-weight: bold;
+}
+.header-button {
+  position: relative;
+  margin-left: 10px;
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.banner {
+  margin: 8px;
+  padding: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.banner-red {
+  background-color: var(--color-red);
+}
+
+.banner-green {
+  background-color: var(--color-green);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-black);
+  padding: 16px 32px;
+}
+
+.form-btn-submit {
+  align-self: flex-end;
+  border-radius: 20px;
+  background: var(--color-blue);
+  padding: 10px;
+}
+
+.form-btn {
+  font-size: 1.2rem;
+  background: var(--color-blue);
+  font-weight: bold;
+  padding: 4px;
+}
+.form-btn-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.form-btn-small {
+  font-size: 0.8rem;
+}
+
+.auth-form-btn {
+  margin: 16px;
+}
+
+.form-input {
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+.form-input:focus {
+  outline: 2px dotted var(--color-blue);
+}
+
+.form-signup {
+  margin-top: 8px;
+}
+
+.tweets {
+  height: 100%;
+  overflow-y: auto;
+  color: var(--color-black);
+  padding: 16px 0;
+  list-style: none;
+  /* Firefox */
+  scrollbar-width: 6px;
+  scrollbar-color: var(--color-darkGrey);
+  scrollbar-face-color: var(--color-blue);
+}
+
+.tweets::-webkit-scrollbar {
+  /* Safari and Chrome */
+  background-color: var(--color-darkGrey);
+  width: 6px;
+}
+
+.tweets::-webkit-scrollbar-thumb {
+  /* Safari and Chrome */
+  background-color: var(--color-blue);
+}
+
+.tweets-empty {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-grey);
+  text-align: center;
+}
+
+.tweet {
+  transition: 0.3s;
+  margin-bottom: 16px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.tweet-container {
+  display: flex;
+  width: 100%;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--size-avatar);
+  height: var(--size-avatar);
+  margin-right: 3px;
+}
+.avatar-img {
+  width: var(--size-avatar);
+  height: var(--size-avatar);
+}
+
+.avatar-txt {
+  width: var(--size-avatar);
+  height: var(--size-avatar);
+  background-color: var(--color-grey);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: var(--size-avatar);
+}
+.tweet-body {
+  margin: 0px 8px;
+  width: 100%;
+}
+
+.tweet-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.tweet-username,
+.tweet-date {
+  font-size: 0.7rem;
+  margin-left: 4px;
+  color: var(--color-blue);
+  font-weight: bold;
+}
+
+.tweet-username {
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.tweet-username:hover {
+  background: var(--color-yellow);
+}
+
+.tweet-date {
+  color: var(--color-darkGrey);
+}
+
+.tweet-form-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 30px 16px;
+  border-bottom: 3px solid var(--color-grey);
+}
+
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 16px;
+  /* background-color: var(--color-grey); */
+}
+
+.tweet-input {
+  width: 100%;
+  margin-right: 4px;
+}
+
+.tweet-new {
+  outline: none;
+  border: none;
+  background-color: var(--color-white);
+}
+.tweet-new:focus {
+  outline: none;
+}
+.tweet-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tweet-action-btn {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-blue);
+  transition: transform 300ms;
+}
+
+.tweet-delete:hover {
+  transform: scale(1.5);
+}
+
+.edit-tweet-form-action {
+  float: right;
+  margin-top: 4px;
+}
+
+.form-btn-update,
+.form-btn-cancel {
+  font-size: 0.8rem;
+  background: var(--color-blue);
+  font-weight: bold;
+  padding: 4px;
+}
+.form-btn-cancel {
+  margin-left: 8px;
+  background: var(--color-red);
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profile-container {
+  flex-direction: column;
+  flex: 1;
+  padding: 0 15px;
+}
+.profile-title,
+.profile-text {
+  color: var(--color-black);
+}
+
+.profile-img-container {
+  margin: 30px auto;
+  width: 200px;
+  border: 1px solid black;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+}
+
+.account-popup-container {
+  flex-direction: column;
+  position: absolute;
+  /* display: none; */
+  top: 45px;
+  background-color: var(--color-white);
+  padding: 10px;
+  align-items: center;
+  border: 1px solid var(--color-darkGrey);
+  border-radius: 10px;
+}
+.account-popup-row {
+  padding: 15px 10px;
+}
