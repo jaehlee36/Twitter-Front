@@ -15,22 +15,20 @@ const AccountPopup = memo(
     onMyTweets,
     onAllTweets,
   }) => {
-    const onClick = ({ target }) => {
-      if (target.matches(".account-popup-text")) return;
-      if (target.childNodes[0].textContent === string.PROFILE) onProfile();
-      else if (target.childNodes[0].textContent === string.LOGOUT) onLogout();
+    const handleClickProfile = () => {
+      onProfile();
+      setIsVisible(false);
+    };
+    const handleClickLogout = () => {
+      onLogout();
       setIsVisible(false);
     };
     return (
-      <div
-        id="account-popup"
-        onClick={onClick}
-        className="account-popup-container"
-      >
-        <div className="account-popup-row">
+      <div id="account-popup" className="account-popup-container">
+        <div className="account-popup-row" onClick={handleClickProfile}>
           <span>Profile</span>
         </div>
-        <div className="account-popup-row">
+        <div className="account-popup-row" onClick={handleClickLogout}>
           <span>Logout</span>
         </div>
       </div>
